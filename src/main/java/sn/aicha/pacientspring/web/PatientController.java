@@ -16,6 +16,10 @@ import java.util.List;
 @AllArgsConstructor
 public class PatientController {
 private PacientRepository PacientRepository;
+    @GetMapping(path = "/")
+    public String home(){
+        return "redirect:/index";
+    }
 
     @GetMapping(path = "/index")
     public String patients(Model model){
